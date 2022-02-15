@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre:</mat-label>
+    <input matInput placeholder="Jhon" formControlName="nombre" required>
+    <mat-error *ngIf="nameField?.touched && nameField?.invalid">Este campo es requerido</mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-raised-button class="conteninrt-file-input" color="primary">
+      <mat-icon>attach_file</mat-icon>
+      <input name="file" type="file" required class="file-input" (change)="uploadFile($event)">
+    </button>
+    <mat-error *ngIf="fileField?.touched && fileField?.invalid">Este campo es requerido</mat-error>
+  </div>
+  <button mat-raised-button color="primary" type="submit">Guardar</button>
+</form>

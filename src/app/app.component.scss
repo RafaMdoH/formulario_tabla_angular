@@ -1,0 +1,17 @@
+.conteiner {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    font-weight: 700;
+  }
+  .table{
+    width: 80%;
+  }
+  .form-container{
+    width: 80%;
+    padding: 10px;
+  }
+}
